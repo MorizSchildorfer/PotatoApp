@@ -9,12 +9,70 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var submitted : Bool = false
+    @IBOutlet weak var SubmitButton: UIButton!
+    @IBOutlet weak var FavoriteTextField: UITextField!
+    @IBOutlet weak var PotatosonaLabel: UILabel!
+    
+    @IBOutlet weak var PotatosonaTextField: UITextField!
+    
+    @IBOutlet weak var DisplayLabel: UILabel!
+    @IBOutlet weak var FavoriteLabel: UILabel!
+    
+    @IBAction func SubmitButtonTapped(_ sender: Any) {
+        submitted = !submitted
+        if(submitted){
+            
+            let potato = PotatosonaTextField.text ?? ""
+            let favorite = FavoriteTextField.text ?? ""
+            
+            UserDefaults.standard.set(potato, forKey: "potato")
+            UserDefaults.standard.set(favorite, forKey:"favorite")
+            PotatosonaTextField.text=""
+            FavoriteTextField.text=""
+            
+            enterClearedMode()
+        }
+        else{
+            
+            enterSubmitMode()
+            UserDefaults.standard.removeObject(forKey:  "potato")
+            UserDefaults.standard.removeObject(forKey: "favorite")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if(UserDefaults.standard.object(forKey: "potato") != nil){
+            enterClearedMode()
+            submitted=true
+            
+        }
+        else{
+            enterSubmitMode()
+        }
     }
-
+    func enterSubmitMode() -> Void {
+        PotatosonaLabel.isHidden=false
+        FavoriteLabel.isHidden=false
+        PotatosonaTextField.isHidden=false
+        FavoriteTextField.isHidden=false
+        DisplayLabel.isHidden=true
+        
+        SubmitButton.setTitle("Submit", for: .normal)
+    }
+    
+    func enterClearedMode() -> Void {
+        let potato = UserDefaults.standard.string(forKey: "potato")
+        let favorite = UserDefaults.standard.string(forKey: "favorite")
+        
+        DisplayLabel.text = "The "+potato!+" is enjoying some "+favorite!+" in a not so glorius act of cannibalism!"
+        PotatosonaLabel.isHidden=true
+        FavoriteLabel.isHidden=true
+        PotatosonaTextField.isHidden=true
+        FavoriteTextField.isHidden=true
+        DisplayLabel.isHidden=false
+        SubmitButton.setTitle("Clear", for: .normal)
+    }
 
 }
 
