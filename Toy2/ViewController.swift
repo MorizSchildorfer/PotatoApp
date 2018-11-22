@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         if(Potato.count == 0){
             Potato.addPotato(type: "Russet", image: #imageLiteral(resourceName: "russet") ,likes: "Sitting in the Oven", hates: "Sport")
             Potato.addPotato(type: "Sweet", image: #imageLiteral(resourceName: "sweet") ,likes: "Russet ;)", hates: "Russet ;)")
+            Potato.addPotato(type: "Ruby", image: #imageLiteral(resourceName: "ruby") ,likes: "Long walks on the beach", hates: "The beach")
         }
     }
     func enterSubmitMode() -> Void {

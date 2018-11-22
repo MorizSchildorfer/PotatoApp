@@ -87,8 +87,8 @@ class PotatoTableViewController: UITableViewController {
         if(segue.identifier=="PotatoProfileSegue"){
             let destVC = segue.destination as! ProfileViewController
             let indexPath = self.tableView.indexPath(for: sender as! PotatoTableViewCell)
-            
             let potatoProfile = Potato.potatoArr![(indexPath?.row)!]
+            
             destVC.type = potatoProfile.type
             destVC.likes = "Likes: "+potatoProfile.likes
             destVC.hates = "Hates: "+potatoProfile.hates

@@ -165,40 +165,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-QY-uhN">
-                                <rect key="frame" x="67" y="100" width="240" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-QY-uhN">
+                                <rect key="frame" x="67" y="88" width="240" height="155"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-Ob-BhE">
-                                <rect key="frame" x="16" y="297" width="47" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-Ob-BhE">
+                                <rect key="frame" x="67" y="323" width="61.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6h-HC-8Ra">
+                                <rect key="frame" x="67" y="352" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Likes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6h-HC-8Ra">
-                                <rect key="frame" x="16" y="337" width="49" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hates: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFM-Pz-5VF">
-                                <rect key="frame" x="16" y="376" width="54" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hates: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFM-Pz-5VF">
+                                <rect key="frame" x="67" y="381" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RFM-Pz-5VF" firstAttribute="top" secondItem="n6h-HC-8Ra" secondAttribute="bottom" constant="8" id="2T6-5J-cB8"/>
+                            <constraint firstItem="n6h-HC-8Ra" firstAttribute="top" secondItem="tuY-QY-uhN" secondAttribute="bottom" constant="109" id="F1g-3f-FPy"/>
+                            <constraint firstItem="IlU-Ob-BhE" firstAttribute="top" secondItem="RFM-Pz-5VF" secondAttribute="bottom" constant="-79" id="F4z-YU-uOq"/>
+                            <constraint firstItem="tuY-QY-uhN" firstAttribute="leading" secondItem="X0w-YV-IJg" secondAttribute="leading" constant="67" id="JL7-Vb-A8Z"/>
+                            <constraint firstItem="tuY-QY-uhN" firstAttribute="centerX" secondItem="WeJ-Qf-3Sy" secondAttribute="centerX" id="L8T-V1-HAJ"/>
+                            <constraint firstItem="tuY-QY-uhN" firstAttribute="leading" secondItem="n6h-HC-8Ra" secondAttribute="leading" id="LUx-uk-kXR"/>
+                            <constraint firstItem="n6h-HC-8Ra" firstAttribute="leading" secondItem="RFM-Pz-5VF" secondAttribute="leading" id="aEs-PO-eop"/>
+                            <constraint firstItem="tuY-QY-uhN" firstAttribute="top" secondItem="X0w-YV-IJg" secondAttribute="top" constant="24" id="fxJ-rA-QIs"/>
+                            <constraint firstItem="RFM-Pz-5VF" firstAttribute="leading" secondItem="IlU-Ob-BhE" secondAttribute="leading" id="r3h-P5-MtK"/>
+                            <constraint firstItem="n6h-HC-8Ra" firstAttribute="centerY" secondItem="WeJ-Qf-3Sy" secondAttribute="centerY" constant="29" id="sbc-1J-Xcx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X0w-YV-IJg"/>
                     </view>
                     <connections>
-                        <outlet property="hates" destination="RFM-Pz-5VF" id="Mti-o9-6av"/>
-                        <outlet property="likes" destination="n6h-HC-8Ra" id="jTa-hP-UIA"/>
-                        <outlet property="profileImage" destination="tuY-QY-uhN" id="vXu-ls-JEU"/>
-                        <outlet property="type" destination="IlU-Ob-BhE" id="8kJ-EQ-XbH"/>
+                        <outlet property="hatesLabel" destination="RFM-Pz-5VF" id="iP5-Rp-Q8i"/>
+                        <outlet property="likesLabel" destination="n6h-HC-8Ra" id="kAE-5G-KPs"/>
+                        <outlet property="profileImageView" destination="tuY-QY-uhN" id="qTe-b0-nM8"/>
+                        <outlet property="typeLabel" destination="IlU-Ob-BhE" id="BaV-EJ-GQE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwH-XT-yCp" userLabel="First Responder" sceneMemberID="firstResponder"/>

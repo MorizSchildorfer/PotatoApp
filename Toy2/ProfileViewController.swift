@@ -16,17 +16,18 @@ class ProfileViewController: UIViewController {
     var likes : String! = " "
     var hates : String! = " "
     
-    @IBOutlet weak var profileImageView: UIImageView!
+   
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var hatesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         typeLabel.text = type
+        profileImageView.image = profileImage
         likesLabel.text = likes
         hatesLabel.text = hates
-        profileImageView.image = profileImage
     }
     
 
