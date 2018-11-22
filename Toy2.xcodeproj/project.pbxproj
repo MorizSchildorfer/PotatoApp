@@ -14,6 +14,10 @@
 		F7952F462197E18700EF5A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7952F442197E18700EF5A6B /* LaunchScreen.storyboard */; };
 		F7952F512197E18800EF5A6B /* Toy2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F502197E18800EF5A6B /* Toy2Tests.swift */; };
 		F7952F5C2197E18800EF5A6B /* Toy2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F5B2197E18800EF5A6B /* Toy2UITests.swift */; };
+		F7952F6A21A71A5E00EF5A6B /* PotatoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F6921A71A5E00EF5A6B /* PotatoTableViewController.swift */; };
+		F7952F6C21A71A8700EF5A6B /* PotatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F6B21A71A8700EF5A6B /* PotatoTableViewCell.swift */; };
+		F7952F6F21A7251100EF5A6B /* Potato.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F6E21A7251100EF5A6B /* Potato.swift */; };
+		F7952F7121A7351600EF5A6B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F7021A7351600EF5A6B /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		F7952F572197E18800EF5A6B /* Toy2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Toy2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7952F5B2197E18800EF5A6B /* Toy2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy2UITests.swift; sourceTree = "<group>"; };
 		F7952F5D2197E18800EF5A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7952F6921A71A5E00EF5A6B /* PotatoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotatoTableViewController.swift; sourceTree = "<group>"; };
+		F7952F6B21A71A8700EF5A6B /* PotatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotatoTableViewCell.swift; sourceTree = "<group>"; };
+		F7952F6E21A7251100EF5A6B /* Potato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potato.swift; sourceTree = "<group>"; };
+		F7952F7021A7351600EF5A6B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,12 @@
 		F7952F3A2197E18600EF5A6B /* Toy2 */ = {
 			isa = PBXGroup;
 			children = (
+				F7952F6D21A724CB00EF5A6B /* Models */,
 				F7952F3B2197E18600EF5A6B /* AppDelegate.swift */,
 				F7952F3D2197E18600EF5A6B /* ViewController.swift */,
+				F7952F6921A71A5E00EF5A6B /* PotatoTableViewController.swift */,
+				F7952F7021A7351600EF5A6B /* ProfileViewController.swift */,
+				F7952F6B21A71A8700EF5A6B /* PotatoTableViewCell.swift */,
 				F7952F3F2197E18600EF5A6B /* Main.storyboard */,
 				F7952F422197E18700EF5A6B /* Assets.xcassets */,
 				F7952F442197E18700EF5A6B /* LaunchScreen.storyboard */,
@@ -123,6 +135,14 @@
 				F7952F5D2197E18800EF5A6B /* Info.plist */,
 			);
 			path = Toy2UITests;
+			sourceTree = "<group>";
+		};
+		F7952F6D21A724CB00EF5A6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7952F6E21A7251100EF5A6B /* Potato.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7952F7121A7351600EF5A6B /* ProfileViewController.swift in Sources */,
+				F7952F6A21A71A5E00EF5A6B /* PotatoTableViewController.swift in Sources */,
+				F7952F6F21A7251100EF5A6B /* Potato.swift in Sources */,
 				F7952F3E2197E18600EF5A6B /* ViewController.swift in Sources */,
+				F7952F6C21A71A8700EF5A6B /* PotatoTableViewCell.swift in Sources */,
 				F7952F3C2197E18600EF5A6B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -50,6 +50,10 @@ class ViewController: UIViewController {
         else{
             enterSubmitMode()
         }
+        if(Potato.count == 0){
+            Potato.addPotato(type: "Russet", image: #imageLiteral(resourceName: "russet") ,likes: "Sitting in the Oven", hates: "Sport")
+            Potato.addPotato(type: "Sweet", image: #imageLiteral(resourceName: "sweet") ,likes: "Russet ;)", hates: "Russet ;)")
+        }
     }
     func enterSubmitMode() -> Void {
         PotatosonaLabel.isHidden=false

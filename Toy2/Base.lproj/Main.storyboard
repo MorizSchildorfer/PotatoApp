@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O3R-6T-SWJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Potato Log-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Toy2" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,31 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Potatosona" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzh-99-aCR">
-                                <rect key="frame" x="40" y="45" width="126" height="21"/>
+                                <rect key="frame" x="40" y="89" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Favorite Potato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4z-cy-Uq4">
-                                <rect key="frame" x="40" y="117" width="154" height="21"/>
+                                <rect key="frame" x="40" y="161" width="154" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TCD-27-HGz">
-                                <rect key="frame" x="40" y="74" width="299" height="30"/>
+                                <rect key="frame" x="40" y="118" width="299" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gn-fc-4RJ">
-                                <rect key="frame" x="40" y="146" width="299" height="30"/>
+                                <rect key="frame" x="40" y="190" width="299" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill with Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICh-ud-mfr">
-                                <rect key="frame" x="40" y="289" width="299" height="105"/>
+                                <rect key="frame" x="40" y="333" width="299" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="IZo-X1-JY0"/>
                                 </constraints>
@@ -51,8 +51,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goz-hu-vYs">
+                                <rect key="frame" x="150" y="516" width="75" height="30"/>
+                                <state key="normal" title="Potato List"/>
+                                <connections>
+                                    <segue destination="M3h-wx-qsc" kind="show" id="Uyu-Th-X81"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUu-Mf-3n1">
-                                <rect key="frame" x="160" y="456" width="55" height="33"/>
+                                <rect key="frame" x="160" y="446" width="55" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
@@ -62,24 +69,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="goz-hu-vYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="66J-dy-53Z"/>
                             <constraint firstItem="D4z-cy-Uq4" firstAttribute="leading" secondItem="8gn-fc-4RJ" secondAttribute="leading" id="9tc-5f-sFJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TCD-27-HGz" secondAttribute="trailing" constant="36" id="BMS-vX-OsM"/>
+                            <constraint firstItem="iUu-Mf-3n1" firstAttribute="top" secondItem="ICh-ud-mfr" secondAttribute="bottom" constant="8" symbolic="YES" id="Bde-Mf-O74"/>
+                            <constraint firstItem="iUu-Mf-3n1" firstAttribute="centerX" secondItem="goz-hu-vYs" secondAttribute="centerX" id="EJG-yM-nON"/>
+                            <constraint firstItem="goz-hu-vYs" firstAttribute="top" secondItem="iUu-Mf-3n1" secondAttribute="bottom" constant="37" id="FE4-g4-3aR"/>
                             <constraint firstItem="mzh-99-aCR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="JBU-Ms-tBS"/>
                             <constraint firstItem="8gn-fc-4RJ" firstAttribute="top" secondItem="D4z-cy-Uq4" secondAttribute="bottom" constant="8" symbolic="YES" id="KCo-jq-aD2"/>
-                            <constraint firstItem="iUu-Mf-3n1" firstAttribute="top" secondItem="8gn-fc-4RJ" secondAttribute="bottom" constant="280" id="Lap-hC-0Ay"/>
                             <constraint firstItem="D4z-cy-Uq4" firstAttribute="top" secondItem="TCD-27-HGz" secondAttribute="bottom" constant="13" id="PLa-qR-RyF"/>
                             <constraint firstItem="mzh-99-aCR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="PPS-b9-O6k"/>
                             <constraint firstItem="TCD-27-HGz" firstAttribute="trailing" secondItem="8gn-fc-4RJ" secondAttribute="trailing" id="Sud-p4-IWt"/>
                             <constraint firstItem="TCD-27-HGz" firstAttribute="leading" secondItem="D4z-cy-Uq4" secondAttribute="leading" id="WQY-Df-fZf"/>
                             <constraint firstItem="TCD-27-HGz" firstAttribute="top" secondItem="mzh-99-aCR" secondAttribute="bottom" constant="8" symbolic="YES" id="WkV-17-6q8"/>
-                            <constraint firstItem="iUu-Mf-3n1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cU1-bv-VRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="goz-hu-vYs" secondAttribute="bottom" constant="121" id="dxF-0I-4Sn"/>
                             <constraint firstItem="ICh-ud-mfr" firstAttribute="trailing" secondItem="8gn-fc-4RJ" secondAttribute="trailing" id="gFV-ga-Hp3"/>
                             <constraint firstItem="mzh-99-aCR" firstAttribute="leading" secondItem="TCD-27-HGz" secondAttribute="leading" id="mPR-Hb-vOx"/>
-                            <constraint firstItem="ICh-ud-mfr" firstAttribute="top" secondItem="iUu-Mf-3n1" secondAttribute="bottom" constant="-200" id="nhA-Bp-BJW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="goz-hu-vYs" secondAttribute="trailing" constant="150" id="og0-Cx-QwF"/>
                             <constraint firstItem="ICh-ud-mfr" firstAttribute="leading" secondItem="8gn-fc-4RJ" secondAttribute="leading" id="z2g-gq-SNx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Potato Log" id="jDX-sm-7Pv"/>
                     <connections>
                         <outlet property="DisplayLabel" destination="ICh-ud-mfr" id="R1t-ZF-SMi"/>
                         <outlet property="FavoriteLabel" destination="D4z-cy-Uq4" id="s7b-xg-fss"/>
@@ -90,6 +101,125 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="26.53673163418291"/>
+        </scene>
+        <!--Potato Table View Controller-->
+        <scene sceneID="njy-Be-IQE">
+            <objects>
+                <tableViewController id="M3h-wx-qsc" customClass="PotatoTableViewController" customModule="Toy2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="75w-ot-nN4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PotatoCell" rowHeight="102" id="ALd-so-qkC" customClass="PotatoTableViewCell" customModule="Toy2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ALd-so-qkC" id="WAp-AM-oCI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Potato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k23-HK-7lZ">
+                                            <rect key="frame" x="42" y="41" width="50" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lO0-Ej-UNV">
+                                            <rect key="frame" x="182" y="11" width="170" height="80"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lO0-Ej-UNV" firstAttribute="leading" secondItem="k23-HK-7lZ" secondAttribute="trailing" constant="90" id="4Ri-tH-2EU"/>
+                                        <constraint firstItem="k23-HK-7lZ" firstAttribute="leading" secondItem="WAp-AM-oCI" secondAttribute="leadingMargin" constant="26" id="8l1-Q7-qm4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lO0-Ej-UNV" secondAttribute="trailing" constant="7" id="9yB-Tr-Er7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="k23-HK-7lZ" secondAttribute="bottom" constant="29" id="jr2-RJ-8hk"/>
+                                        <constraint firstItem="k23-HK-7lZ" firstAttribute="centerY" secondItem="lO0-Ej-UNV" secondAttribute="centerY" id="kq5-T9-mgd"/>
+                                        <constraint firstItem="lO0-Ej-UNV" firstAttribute="top" secondItem="WAp-AM-oCI" secondAttribute="topMargin" id="ohZ-e9-Uke"/>
+                                        <constraint firstItem="lO0-Ej-UNV" firstAttribute="bottom" secondItem="WAp-AM-oCI" secondAttribute="bottomMargin" id="wNV-jj-Ntj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="PotatoImageView" destination="lO0-Ej-UNV" id="FrY-x0-ypY"/>
+                                    <outlet property="TypeLabel" destination="k23-HK-7lZ" id="6cn-o7-5DD"/>
+                                    <segue destination="BC0-p7-J7k" kind="show" identifier="PotatoProfileSegue" id="D1c-rR-mX5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M3h-wx-qsc" id="PUa-qU-2nC"/>
+                            <outlet property="delegate" destination="M3h-wx-qsc" id="DXQ-Fj-KSm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDc-cr-aIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.5999999999999" y="26.53673163418291"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Jh7-RN-fRR">
+            <objects>
+                <viewController id="BC0-p7-J7k" customClass="ProfileViewController" customModule="Toy2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WeJ-Qf-3Sy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-QY-uhN">
+                                <rect key="frame" x="67" y="100" width="240" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-Ob-BhE">
+                                <rect key="frame" x="16" y="297" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Likes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6h-HC-8Ra">
+                                <rect key="frame" x="16" y="337" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hates: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFM-Pz-5VF">
+                                <rect key="frame" x="16" y="376" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="X0w-YV-IJg"/>
+                    </view>
+                    <connections>
+                        <outlet property="hates" destination="RFM-Pz-5VF" id="Mti-o9-6av"/>
+                        <outlet property="likes" destination="n6h-HC-8Ra" id="jTa-hP-UIA"/>
+                        <outlet property="profileImage" destination="tuY-QY-uhN" id="vXu-ls-JEU"/>
+                        <outlet property="type" destination="IlU-Ob-BhE" id="8kJ-EQ-XbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwH-XT-yCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2629.5999999999999" y="26.53673163418291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3JB-HC-kAt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O3R-6T-SWJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KC4-Pb-qgX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5AW-ao-vDx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7F-Mi-zU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
