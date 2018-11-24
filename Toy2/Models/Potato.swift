@@ -14,14 +14,15 @@ class Potato: NSObject {
         let image : UIImage!
         let likes : String!
         let hates : String!
+        let interested : String!
     }
     
     static var count : Int = 0
     
     static var potatoArr : [PotatoCellInfo]! = [PotatoCellInfo]()
     
-    class func addPotato(type : String!, image: UIImage!, likes : String!, hates : String!) -> Void{
-        potatoArr.append(PotatoCellInfo(type: type, image: image, likes: likes, hates: hates))
+    class func addPotato(type : String!, image: UIImage!, likes : String!, hates : String!, interested: String!) -> Void{
+        potatoArr.append(PotatoCellInfo(type: type, image: image, likes: likes, hates: hates, interested: interested))
         count += 1
     }
     

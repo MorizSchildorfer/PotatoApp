@@ -8,6 +8,17 @@
 
 import UIKit
 
+extension UIViewController{
+    func dismissKeyBoardWhenTappingAround(){
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(false)
+    }
+    
+}
+
 class ViewController: UIViewController {
     var submitted : Bool = false
     @IBOutlet weak var SubmitButton: UIButton!
@@ -42,6 +53,9 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dismissKeyBoardWhenTappingAround()
+        
         if(UserDefaults.standard.object(forKey: "potato") != nil){
             enterClearedMode()
             submitted=true
@@ -56,12 +70,12 @@ class ViewController: UIViewController {
                     let imageURL = URL(string: dict["image"]!)
                     let image = UIImage(data: try! Data(contentsOf: imageURL!))
                     
-                    Potato.addPotato(type: dict["type"], image: image, likes: dict["likes"], hates: dict["hates"])
+                    Potato.addPotato(type: dict["type"], image: image, likes: dict["likes"], hates: dict["hates"], interested: "Russet")
                 }
             }
-            Potato.addPotato(type: "Russet", image: #imageLiteral(resourceName: "russet") ,likes: "Sitting in the Oven", hates: "Sport")
-            Potato.addPotato(type: "Sweet", image: #imageLiteral(resourceName: "sweet") ,likes: "Russet ;)", hates: "Russet ;)")
-            Potato.addPotato(type: "Ruby", image: #imageLiteral(resourceName: "ruby") ,likes: "Long walks on the beach", hates: "The beach")
+            Potato.addPotato(type: "Russet", image: #imageLiteral(resourceName: "russet") ,likes: "Sitting in the Oven", hates: "Sport", interested: "Self")
+            Potato.addPotato(type: "Sweet", image: #imageLiteral(resourceName: "sweet") ,likes: "Russet ;)", hates: "Russet ;)", interested: "Russet")
+            Potato.addPotato(type: "Ruby", image: #imageLiteral(resourceName: "ruby") ,likes: "Long walks on the beach", hates: "The beach", interested: "Sweet")
         }
     }
     func enterSubmitMode() -> Void {

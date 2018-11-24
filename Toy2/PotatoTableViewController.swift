@@ -92,6 +92,7 @@ class PotatoTableViewController: UITableViewController {
             destVC.type = potatoProfile.type
             destVC.likes = "Likes: "+potatoProfile.likes
             destVC.hates = "Hates: "+potatoProfile.hates
+            destVC.interested = "Interested in: "+potatoProfile.interested
             destVC.profileImage = potatoProfile.image
             
 

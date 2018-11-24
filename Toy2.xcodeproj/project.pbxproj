@@ -18,6 +18,8 @@
 		F7952F6C21A71A8700EF5A6B /* PotatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F6B21A71A8700EF5A6B /* PotatoTableViewCell.swift */; };
 		F7952F6F21A7251100EF5A6B /* Potato.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F6E21A7251100EF5A6B /* Potato.swift */; };
 		F7952F7121A7351600EF5A6B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F7021A7351600EF5A6B /* ProfileViewController.swift */; };
+		F7952F7321A8EC5F00EF5A6B /* AddPotatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F7221A8EC5F00EF5A6B /* AddPotatoViewController.swift */; };
+		F7952F7521A8EC9800EF5A6B /* AddPotatoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7952F7421A8EC9800EF5A6B /* AddPotatoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		F7952F6B21A71A8700EF5A6B /* PotatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotatoTableViewCell.swift; sourceTree = "<group>"; };
 		F7952F6E21A7251100EF5A6B /* Potato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potato.swift; sourceTree = "<group>"; };
 		F7952F7021A7351600EF5A6B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F7952F7221A8EC5F00EF5A6B /* AddPotatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPotatoViewController.swift; sourceTree = "<group>"; };
+		F7952F7421A8EC9800EF5A6B /* AddPotatoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPotatoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				F7952F6921A71A5E00EF5A6B /* PotatoTableViewController.swift */,
 				F7952F7021A7351600EF5A6B /* ProfileViewController.swift */,
 				F7952F6B21A71A8700EF5A6B /* PotatoTableViewCell.swift */,
+				F7952F7221A8EC5F00EF5A6B /* AddPotatoViewController.swift */,
+				F7952F7421A8EC9800EF5A6B /* AddPotatoCell.swift */,
 				F7952F3F2197E18600EF5A6B /* Main.storyboard */,
 				F7952F422197E18700EF5A6B /* Assets.xcassets */,
 				F7952F442197E18700EF5A6B /* LaunchScreen.storyboard */,
@@ -285,6 +291,8 @@
 				F7952F3E2197E18600EF5A6B /* ViewController.swift in Sources */,
 				F7952F6C21A71A8700EF5A6B /* PotatoTableViewCell.swift in Sources */,
 				F7952F3C2197E18600EF5A6B /* AppDelegate.swift in Sources */,
+				F7952F7521A8EC9800EF5A6B /* AddPotatoCell.swift in Sources */,
+				F7952F7321A8EC5F00EF5A6B /* AddPotatoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

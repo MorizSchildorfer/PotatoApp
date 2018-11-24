@@ -15,12 +15,14 @@ class ProfileViewController: UIViewController {
     var profileImage : UIImage! = #imageLiteral(resourceName: "yukon")
     var likes : String! = " "
     var hates : String! = " "
+    var interested : String! = " "
     
    
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var hatesLabel: UILabel!
+    @IBOutlet weak var interestedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class ProfileViewController: UIViewController {
         profileImageView.image = profileImage
         likesLabel.text = likes
         hatesLabel.text = hates
+        interestedLabel.text = interested
     }
     
 
