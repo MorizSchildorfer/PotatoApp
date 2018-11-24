@@ -51,6 +51,14 @@ class ViewController: UIViewController {
             enterSubmitMode()
         }
         if(Potato.count == 0){
+            Potato.loadPotatos{ (result) in
+                for dict in result {
+                    let imageURL = URL(string: dict["image"]!)
+                    let image = UIImage(data: try! Data(contentsOf: imageURL!))
+                    
+                    Potato.addPotato(type: dict["type"], image: image, likes: dict["likes"], hates: dict["hates"])
+                }
+            }
             Potato.addPotato(type: "Russet", image: #imageLiteral(resourceName: "russet") ,likes: "Sitting in the Oven", hates: "Sport")
             Potato.addPotato(type: "Sweet", image: #imageLiteral(resourceName: "sweet") ,likes: "Russet ;)", hates: "Russet ;)")
             Potato.addPotato(type: "Ruby", image: #imageLiteral(resourceName: "ruby") ,likes: "Long walks on the beach", hates: "The beach")

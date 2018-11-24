@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController {
 
     
     var type : String! = " "
-    var profileImage : UIImage! = #imageLiteral(resourceName: "sweet")
+    var profileImage : UIImage! = #imageLiteral(resourceName: "yukon")
     var likes : String! = " "
     var hates : String! = " "
     
