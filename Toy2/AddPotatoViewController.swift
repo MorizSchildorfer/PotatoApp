@@ -31,28 +31,28 @@ class AddPotatoViewController: UIViewController, UITableViewDelegate,UITableView
     
     //Mark: Button Taps
     @IBAction func ClearButtonTapped(_ sender: Any) {
-        interested = "Nobody"
-        likes = ""
-        hates = ""
-        type = ""
-        
+        clearSelections()
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func DoneButtonTapped(_ sender: Any) {
         
         Potato.addPotato(type: type, image: #imageLiteral(resourceName: "yukon"), likes: likes, hates: hates, interested: interested)
-        
-        interested = "Nobody"
-        likes = ""
-        hates = ""
-        type = ""
+        clearSelections()
         
         dismiss(animated: true, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
+    }
+    
+    func clearSelections()->Void{
+        interested = "Nobody"
+        likes = ""
+        hates = ""
+        type = ""
+        selectedRow = 0
     }
     
     
@@ -109,6 +109,7 @@ class AddPotatoViewController: UIViewController, UITableViewDelegate,UITableView
             else{
                 cell.TextView.isHidden = true
                 cell.PickerView.isHidden = false
+                cell.PickerView.selectRow(selectedRow, inComponent: 0, animated: true)
             }
             
         }

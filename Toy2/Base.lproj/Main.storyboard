@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O3R-6T-SWJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIW-lJ-Fkn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--About-->
+        <scene sceneID="9ji-bZ-eAS">
+            <objects>
+                <viewController id="c8R-gd-dhn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbJ-d0-Ok6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCp-NQ-Kml">
+                                <rect key="frame" x="10" y="40" width="355" height="558"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Heyo, Tiny Mo in the house. I hope you appreciate this potato app born from ridicioulus stupidity. ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="19"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lDE-Kt-VRn" firstAttribute="bottom" secondItem="gCp-NQ-Kml" secondAttribute="bottom" constant="20" id="Fus-ff-PrG"/>
+                            <constraint firstItem="gCp-NQ-Kml" firstAttribute="top" secondItem="lDE-Kt-VRn" secondAttribute="top" constant="20" id="FyG-QY-VcB"/>
+                            <constraint firstItem="gCp-NQ-Kml" firstAttribute="centerX" secondItem="jbJ-d0-Ok6" secondAttribute="centerX" id="Rm1-Ae-hCG"/>
+                            <constraint firstItem="gCp-NQ-Kml" firstAttribute="leading" secondItem="lDE-Kt-VRn" secondAttribute="leading" constant="10" id="Z5h-ND-PFJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lDE-Kt-VRn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="about_icon-1" largeContentSizeImage="about_icon" id="j25-mm-Frg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUF-Od-8dN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="-718"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="w4g-Qw-wcd">
+            <objects>
+                <tabBarController id="dIW-lJ-Fkn" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bdO-wP-TWR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="O3R-6T-SWJ" kind="relationship" relationship="viewControllers" id="OJu-0t-79f"/>
+                        <segue destination="c8R-gd-dhn" kind="relationship" relationship="viewControllers" id="RQY-xy-zdK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzW-Zu-2gB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-769" y="27"/>
+        </scene>
         <!--Potato Log-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -43,7 +97,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill with Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICh-ud-mfr">
-                                <rect key="frame" x="40" y="333" width="299" height="105"/>
+                                <rect key="frame" x="40" y="284" width="299" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="IZo-X1-JY0"/>
                                 </constraints>
@@ -52,14 +106,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goz-hu-vYs">
-                                <rect key="frame" x="150" y="516" width="75" height="30"/>
+                                <rect key="frame" x="150" y="467" width="75" height="30"/>
                                 <state key="normal" title="Potato List"/>
                                 <connections>
                                     <segue destination="M3h-wx-qsc" kind="show" id="Uyu-Th-X81"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUu-Mf-3n1">
-                                <rect key="frame" x="160" y="446" width="55" height="33"/>
+                                <rect key="frame" x="160" y="397" width="55" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
@@ -90,6 +144,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Potatos" id="SXl-ZN-TwS"/>
                     <navigationItem key="navigationItem" title="Potato Log" id="jDX-sm-7Pv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="asP-1n-4bW">
                             <connections>
@@ -303,10 +358,11 @@
             </objects>
             <point key="canvasLocation" x="2629.5999999999999" y="26.53673163418291"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Potatos-->
         <scene sceneID="3JB-HC-kAt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O3R-6T-SWJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Potatos" image="potato_icon" id="YMY-Fe-Uee"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KC4-Pb-qgX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -340,4 +396,9 @@
             <point key="canvasLocation" x="980" y="822.63868065967017"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="about_icon" width="450" height="450"/>
+        <image name="about_icon-1" width="25" height="25"/>
+        <image name="potato_icon" width="25" height="25"/>
+    </resources>
 </document>

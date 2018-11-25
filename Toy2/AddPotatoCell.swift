@@ -12,10 +12,10 @@ var interested: String! = "Nobody"
 var likes: String! = ""
 var hates: String! = ""
 var type: String! = ""
+var selectedRow : Int! = 0
 
 class AddPotatoCell: UITableViewCell , UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate{
 
-    
     var addPotatoViewControllerShortcut : AddPotatoViewController? = nil
     
     @IBOutlet weak var TextView: UITextView!
@@ -25,6 +25,7 @@ class AddPotatoCell: UITableViewCell , UIPickerViewDelegate, UIPickerViewDataSou
         PickerView.delegate = self
         PickerView.dataSource = self
         TextView.delegate = self
+        
         // Initialization code
     }
 
@@ -55,6 +56,7 @@ class AddPotatoCell: UITableViewCell , UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedRow = row
         if(row==0){
             interested = "Self"
         }
@@ -65,6 +67,9 @@ class AddPotatoCell: UITableViewCell , UIPickerViewDelegate, UIPickerViewDataSou
         addPotatoViewControllerShortcut?.TableView.reloadRows(at: [IndexPath.init(row: 0, section: 2)], with: .automatic)
         
         addPotatoViewControllerShortcut?.DoneButton.isEnabled=canSubmit()
+        
+        
+        print(selectedRow)
     }
     
     func textViewDidChange(_ textView: UITextView) {
